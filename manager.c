@@ -64,6 +64,7 @@ int selectDataNo(Product *p, int count){//수정 또는 삭제할 제품을 선�
     scanf("%d",&no);
     return no;
 }
+
 int updateProduct(Product *p){//하나의 제품의 정보를 수정하는 함수
     printf("제품명은?");
     getchar();
@@ -79,9 +80,11 @@ int updateProduct(Product *p){//하나의 제품의 정보를 수정하는 함�
     scanf("%d",&p->deliver);
     return 1;
 }
+
 int deleteProduct(Product *p){//하나의 제품을 삭제하는 함수
    return p->price = -1;
 }
+
 void saveData(Product *p, int count){//정보를 저장하는 함수
     FILE *fp;
     fp = fopen("product.txt", "w");
@@ -92,6 +95,7 @@ void saveData(Product *p, int count){//정보를 저장하는 함수
     fclose(fp);
     printf("=>저장됨!\n");
 }
+
 int loadData(Product *p){//기존 파일의 정보를 읽어오는 함수
     int i=0;
     FILE *fp;
@@ -106,6 +110,7 @@ int loadData(Product *p){//기존 파일의 정보를 읽어오는 함수
     }
 return i;
 }
+
 void searchProduct(Product *p , int count){//제품의 이름을 검색하는 함수
     char search[20];
     int scnt=0;
@@ -123,7 +128,7 @@ void searchProduct(Product *p , int count){//제품의 이름을 검색하는 �
     if(scnt==0)printf("=>검색된 데이터 없음!");
     printf("\n");
 }
-void searchDeliver(Product *p, int count){//새벽배송 or 택배배송되는 제품을 검색하는 함수(num=>새벽배송:1,택배배송:2)
+void searchDeliver(Product *p, int count){//(num=>새벽배송:1,택배배송:2)
     int search;
     int scnt=0;
     printf("새벽배송 제품을 찾으신다면 1을, 택배배송 제품을 찾으신다면 2를 입력해주세요.");
