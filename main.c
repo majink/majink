@@ -4,8 +4,7 @@
 
 int main(void){
     Product s[20];
-    int count = 0, menu;
-    int index=0;
+    int count = 0, menu,index=0;
 
     count = loadData(s);
     index = count;
