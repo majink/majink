@@ -12,7 +12,6 @@ int main(void){
 
     if(count >0)printf("=>파일 읽기 완료!\n");
     else printf("=>파일 없음!\n");
-
     while (1){
 
       
@@ -68,6 +67,3 @@ int main(void){
     printf("종료됨!\n");
     return 0;
 }
-
-
-
