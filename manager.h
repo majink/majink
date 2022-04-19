@@ -15,7 +15,7 @@ int updateProduct(Product *p);//하나의 제품의 정보를 수정하는 함�
 int deleteProduct(Product *p);//하나의 제품을 삭제하는 함수
 void saveData(Product *p, int count); //정보를 저장하는 함수
 int loadData(Product *p); //기존 파일의 정보를 읽어오는 함수
-//3개의 검색기능 구현
+
 void searchProduct(Product *p , int count); //제품의 이름을 검색하는 함수
 void searchDeliver(Product *p, int count); //새벽배송 or 택배배송되는 제품을 검색하는 함수(num=>새벽배송:1,택배배송:2)
 void searchLocal(Product *p,int count);//원산지를 검색하는 함수
